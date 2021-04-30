@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VfR-Veranstaltungen</title>
+  <title>Document</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--
@@ -24,7 +24,7 @@
       <div class="todo-input todo-block">
         <span>Name: </span>
         <input type="text" placeholder="Namen eingeben">
-        <span>Place: </span>
+        <span>Ort: </span>
         <input type="text" placeholder="Ort eingeben" list="categoryList">
         <datalist id="categoryList">
           <option value="Gym"></option>
@@ -37,10 +37,9 @@
         <span></span>
         <button id="addBtn">Buchen</button>
         <span></span>
-        <button id="sortBtn">Nach Datum sortieren</button>
+        <button id="sortBtn">Sort by Date</button>
         <span></span>
-        <label><input type="checkbox" id="shortlistBtn"> Incomplete First </label>
-      
+        <label><input type="checkbox" id="shortlistBtn"> Nicht abgehakte zuerst </label>
         
       </div>
 
@@ -68,20 +67,20 @@
   <div class="todo-overlay" id="todo-overlay">
     <div class="todo-modal" id="todo-modal">
       <div class="todo-input todo-block">
-        <span>Name: </span>
-        <input type="text" placeholder="Namen eingeben" id="todo-edit-todo">
-        <span>Ort: </span>
-        <input type="text" placeholder="Ort eingeben" list="categoryList"  id="todo-edit-category">
+        <span>To-do: </span>
+        <input type="text" placeholder="Enter new to-do" id="todo-edit-todo">
+        <span>Category: </span>
+        <input type="text" placeholder="Enter category" list="categoryList"  id="todo-edit-category">
         <datalist id="categoryList">
-          <option value="Gym"></option>
-          <option value="Platz"></option>
+          <option value="Personal"></option>
+          <option value="Work"></option>
         </datalist>
-        <span>Datum:</span>
+        <span>Date:</span>
         <input type="date" id="todo-edit-date">
-        <span>Zeit:</span>
+        <span>Time:</span>
         <input type="time" id="todo-edit-time">
         <span></span>
-        <button id="changeBtn">Sichern</button>
+        <button id="changeBtn">Save Change</button>
       </div>
     </div>
     <div class="todo-modal-close-btn" id="todo-modal-close-btn">X</div>
