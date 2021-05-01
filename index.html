@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--https://www.youtube.com/watch?v=U6ylOQbeVU4-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VfR-Planer</title>
+  <link rel="stylesheet" href="todo.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.1.0/main.min.js"></script>
+  -->
+  <link rel="stylesheet" href="./fullcalendar/main.min.css">
+  <script src="./fullcalendar/main.min.js" defer></script>
+  <script src="todo.js" defer></script>
+</head>
+
+<body>
+  <h3>VfR-Planungen</h3>
+  <div class="todo-grid-parent">
+
+    <div>
+      <div class="todo-input todo-block">
+        <span>Name: </span>
+        <input type="text" placeholder="Namen eingeben">
+        <span>Ort: </span>
+        <input type="text" placeholder="Ort eingeben" list="categoryList">
+        <datalist id="categoryList">
+          <option value="Gym"></option>
+          <option value="Platz"></option>
+        </datalist>
+        <span>Datum:</span>
+        <input type="date" id="dateInput">
+        <span>Zeit:</span>
+        <input type="time" id="timeInput">
+        <span></span>
+        <button id="addBtn">Buchen</button>
+        <span></span>
+        <button id="sortBtn">Nach Datum sortieren</button>
+        <span></span>
+        <label><input type="checkbox" id="shortlistBtn"> nicht abgehakte zuerst </label>
+
+      </div>
+
+      <table id="todoTable" class=" todo-block">
+        <tr>
+          <td></td>
+          <td>Datum</td>
+          <td>Zeit</td>
+          <td>Name</td>
+          <td>
+            <select id="categoryFilter">
+            </select>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="todo-calendar  todo-block">
+      <div id='calendar'></div>
+    </div>
+
+  </div> <!-- class="todo-grid-parent" -->
+
+  <div class="todo-overlay" id="todo-overlay">
+    <div class="todo-modal" id="todo-modal">
+      <div class="todo-input todo-block">
+        <span>Name: </span>
+        <input type="text" placeholder="Name eingeben" id="todo-edit-todo">
+        <span>Ort: </span>
+        <input type="text" placeholder="Ort eingeben" list="categoryList" id="todo-edit-category">
+        <datalist id="categoryList">
+          <option value="Gym"></option>
+          <option value="Platz"></option>
+        </datalist>
+        <span>Datum:</span>
+        <input type="date" id="todo-edit-date">
+        <span>Zeit:</span>
+        <input type="time" id="todo-edit-time">
+        <span></span>
+        <button id="changeBtn">Speichern</button>
+      </div>
+    </div>
+    <div class="todo-modal-close-btn" id="todo-modal-close-btn">X</div>
+  </div>
+
+</body>
+
+</html>
