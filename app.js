@@ -1,7 +1,7 @@
 todoMain();
 
 function todoMain() {
-  const DEFAULT_OPTION = "Choose category";
+  const DEFAULT_OPTION = "Ort auswählen";
 
   let inputElem,
     inputElem2,
